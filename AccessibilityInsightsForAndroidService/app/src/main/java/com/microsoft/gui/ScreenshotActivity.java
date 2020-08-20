@@ -1,13 +1,14 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-package com.gui;
+package com.microsoft.gui;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.media.projection.MediaProjectionManager;
 import android.os.Bundle;
 import android.widget.Toast;
+
 import androidx.annotation.Nullable;
 
 import com.microsoft.accessibilityinsightsforandroidservice.MediaProjectionHolder;
@@ -20,7 +21,6 @@ public class ScreenshotActivity extends Activity {
   @Override
   protected void onCreate(@Nullable Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-
     mediaManager = (MediaProjectionManager) getSystemService(MEDIA_PROJECTION_SERVICE);
     startActivityForResult(mediaManager.createScreenCaptureIntent(), SCREENSHOT);
   }

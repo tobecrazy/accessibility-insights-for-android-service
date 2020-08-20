@@ -9,7 +9,7 @@
         android:icon="@mipmap/blue_launcher"
         android:theme="@style/Theme.AppCompat"
         android:label="@string/accessibility_service_label">
-        <activity android:name="com.gui.MainActivity">
+        <activity android:name="com.microsoft.gui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -32,7 +32,7 @@
         </service>
 
         <activity
-            android:name="com.gui.ScreenshotActivity"
+            android:name="com.microsoft.gui.ScreenshotActivity"
             android:excludeFromRecents="true"
             android:exported="false"
             android:label="@string/accessibility_service_label" />

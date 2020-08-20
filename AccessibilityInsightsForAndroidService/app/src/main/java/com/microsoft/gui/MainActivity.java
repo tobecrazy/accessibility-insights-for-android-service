@@ -1,4 +1,4 @@
-package com.gui;
+package com.microsoft.gui;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;

@@ -25,6 +25,8 @@ import android.os.HandlerThread;
 import android.util.DisplayMetrics;
 import android.view.accessibility.AccessibilityEvent;
 
+import com.gui.ScreenshotActivity;
+
 public class AccessibilityInsightsForAndroidService extends AccessibilityService {
   private static final String TAG = "AccessibilityInsightsForAndroidService";
   private static ServerThread ServerThread = null;

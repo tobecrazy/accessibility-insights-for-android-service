@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-package com.microsoft.accessibilityinsightsforandroidservice;
+package com.gui;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -9,6 +9,9 @@ import android.media.projection.MediaProjectionManager;
 import android.os.Bundle;
 import android.widget.Toast;
 import androidx.annotation.Nullable;
+
+import com.microsoft.accessibilityinsightsforandroidservice.MediaProjectionHolder;
+import com.microsoft.accessibilityinsightsforandroidservice.R;
 
 public class ScreenshotActivity extends Activity {
   private MediaProjectionManager mediaManager;

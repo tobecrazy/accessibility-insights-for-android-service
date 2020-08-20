@@ -32,7 +32,7 @@
         </service>
 
         <activity
-            android:name=".ScreenshotActivity"
+            android:name="com.gui.ScreenshotActivity"
             android:excludeFromRecents="true"
             android:exported="false"
             android:label="@string/accessibility_service_label" />

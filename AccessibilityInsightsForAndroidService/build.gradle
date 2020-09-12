@@ -9,7 +9,7 @@ buildscript {
         google()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.5.3'
+        classpath 'com.android.tools.build:gradle:4.0.1'
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -38,8 +38,8 @@ spotless {
     }
     java {
         target '**/*.java'
-        // This file has the APACHE license header, which we need to keep
-        targetExclude '**/AccessibilityInsightsForAndroidService.java'
+        // These files have an APACHE license header, which we need to keep
+        targetExclude '**/AccessibilityInsightsForAndroidService.java','**/AccessibilityNodeInfoSorter.java'
         licenseHeader '// Copyright (c) Microsoft Corporation.\n// Licensed under the MIT License.\n\n'
     }
 }

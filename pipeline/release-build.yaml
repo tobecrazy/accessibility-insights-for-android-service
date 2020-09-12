@@ -37,7 +37,7 @@ jobs:
           testResultsFiles: '**/TEST-*.xml'
           tasks: 'build'
 
-      - script: type $(system.defaultWorkingDirectory)\AccessibilityInsightsForAndroidService\app\build\outputs\apk\release\output.json
+      - script: type $(system.defaultWorkingDirectory)\AccessibilityInsightsForAndroidService\app\build\outputs\apk\release\output-metadata.json
         displayName: print out generated release APK info
 
       # unsigned-apk artifact
@@ -101,12 +101,19 @@ jobs:
 
       # terms artifact
 
+      - task: ComponentGovernanceComponentDetection@0
+        displayName: '(terms) dependency detection (Component Governance)'
+        timeoutInMinutes: 5
+
+      - script: node $(system.defaultWorkingDirectory)/pipeline/verify-notice-contents.js
+        displayName: (terms) verify NOTICE.html content matches lockfile
+
       - task: CopyFiles@2
-        displayName: (terms) copy LICENSE/NOTICE to artifact staging
+        displayName: (terms) copy LICENSE and NOTICE.html to artifact staging
         inputs:
           contents: |
             LICENSE
-            NOTICE.txt
+            NOTICE.html
           sourceFolder: '$(system.defaultWorkingDirectory)'
           targetFolder: '$(build.artifactstagingdirectory)/terms'
 
@@ -123,7 +130,7 @@ jobs:
         inputs:
           contents: |
             terms/LICENSE
-            terms/NOTICE.txt
+            terms/NOTICE.html
             signed-apk/AccessibilityInsightsforAndroidService.apk
           sourceFolder: '$(build.artifactstagingdirectory)'
           targetFolder: '$(build.artifactstagingdirectory)/github-release-archive/contents'
@@ -149,7 +156,7 @@ jobs:
         inputs:
           contents: |
             terms/LICENSE
-            terms/NOTICE.txt
+            terms/NOTICE.html
             signed-apk/AccessibilityInsightsforAndroidService.apk
           sourceFolder: '$(build.artifactstagingdirectory)'
           targetFolder: '$(system.defaultWorkingDirectory)/npm-wrapper'

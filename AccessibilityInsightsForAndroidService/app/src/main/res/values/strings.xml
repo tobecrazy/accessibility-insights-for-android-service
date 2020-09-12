@@ -24,4 +24,5 @@
     <string name="accessibility_service_usage">Forward port:\nadb forward tcp:62442 tcp:62442</string>
     <string name="command">adb forward tcp:62442 tcp:62442</string>
     <string name="label">copy command</string>
+    <string name="click_to_settings">Click to settings for Accessibility</string>
 </resources>

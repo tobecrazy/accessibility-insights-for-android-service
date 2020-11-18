@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+    tools:context="com.microsoft.gui.MainActivity"
+    android:orientation="vertical">
+    <TextView
+        android:padding="10dp"
+        android:layout_gravity="center"
+        android:text="@string/accessibility_service_usage"
+        android:layout_width="match_parent"
+        android:textColor="@color/blue_launcher_background"
+        android:textIsSelectable="true"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:padding="10dp"
+        android:text="@android:string/copy"
+        android:layout_gravity="center"
+        android:id="@+id/click_to_copy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:padding="10dp"
+        android:text="@string/click_to_settings"
+        android:layout_gravity="center"
+        android:id="@+id/click_to_setting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
